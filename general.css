@@ -1,0 +1,42 @@
+
+:root{
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+}
+
+p{
+  margin: 0;
+}
+
+
+.logo{
+  width: 100%;
+  max-width: 80px;
+}
+
+.buttons-play{
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+
+.button-main{
+  color: white;
+  background: none;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 20px;
+  box-shadow: 0 0 15px rgba(0, 191, 255, 0.7);
+}
+
+.button-main:hover{
+  background: #00bfff;
+  box-shadow: 0 0 25px rgba(0, 191, 255, 1);
+}

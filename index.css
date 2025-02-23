@@ -30,12 +30,7 @@ main{
 h1{
   color: white;
   font-weight: bold;
-  font-size: 2.5rem;
-}
-
-.logo{
-  width: 100%;
-  max-width: 80px;
+  font-size: 3rem;
 }
 
 .slogan{
@@ -62,22 +57,6 @@ h1{
   justify-content: center;
   text-align: center;
   flex-wrap: wrap;
-}
-
-.button-main{
-  color: white;
-  background: none;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 16px;
-  padding: 10px 20px;
-  box-shadow: 0 0 15px rgba(0, 191, 255, 0.7);
-}
-
-.button-main:hover{
-  background: #00bfff;
-  box-shadow: 0 0 25px rgba(0, 191, 255, 1);
 }
 
 
