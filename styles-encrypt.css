@@ -44,7 +44,7 @@ textarea{
   width: 100%;
   max-width: 620px;
   height: 200px;
-
+  padding: 10px;
   color: white;
   font-weight: bold;
   background: none;
