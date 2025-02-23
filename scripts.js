@@ -3,8 +3,11 @@ const encryptButton = document.querySelector('.js-encrypt-button');
 const decryptButton = document.querySelector('.js-decrypt-button');
 const outputText = document.querySelector('.js-encrypt-result');
 const deleteButton = document.querySelector('.js-button-delete');
+const outputImage = document.querySelector('.js-output-image');
 
 
+
+boxText.focus();
 
 function encryptionRules (messageUser){
 
@@ -49,20 +52,33 @@ function renderResult(messageUser){
 
 function deleteText(){
   boxText.value = '';
-  outputText.innerHTML = '';
+  outputText.innerText = "";
+  outputImage.style.visibility = 'visible';
+  
 }
-
 
 
 encryptButton.addEventListener('click', () => {
   let messageUser = boxText.value;
-  renderResult(messageUser);
+  if (messageUser){
+    outputImage.style.visibility = 'hidden';
+    renderResult(messageUser);
+  }else{
+    alert('You must enter a text.');
+  }
+ 
 });
 
 decryptButton.addEventListener('click', () => {
   let messageUser = boxText.value;
-  const result = decryptRules(messageUser);
-  outputText.innerHTML = result;
+  if (messageUser){
+    outputImage.style.visibility = 'hidden';
+    const result = decryptRules(messageUser);
+    outputText.innerHTML = result;
+  }else{
+    alert('You must enter a text.');
+  }
+ 
 
 
 })
