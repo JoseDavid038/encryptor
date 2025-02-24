@@ -4,6 +4,7 @@ const decryptButton = document.querySelector('.js-decrypt-button');
 const outputText = document.querySelector('.js-encrypt-result');
 const deleteButton = document.querySelector('.js-button-delete');
 const outputImage = document.querySelector('.js-output-image');
+const copyButton = document.querySelector('.js-copy-button');
 
 
 
@@ -58,6 +59,28 @@ function deleteText(){
 }
 
 
+function copyToClipboard() {
+  let copyText = outputText.innerText;
+  navigator.clipboard.writeText(copyText);
+
+  // Notification the copied text
+  toast();
+
+}
+
+
+function toast() {
+  // Get the snackbar DIV
+  var messageToast = document.querySelector(".js-snackbar");
+
+  // Add the "show" class to DIV
+  messageToast.classList.add('show');
+
+  // After 3 seconds, remove the show class from DIV
+  setTimeout(function(){ messageToast.className = messageToast.className.replace("show", ""); }, 3000);
+}
+
+
 encryptButton.addEventListener('click', () => {
   let messageUser = boxText.value;
   if (messageUser){
@@ -77,10 +100,12 @@ decryptButton.addEventListener('click', () => {
     outputText.innerHTML = result;
   }else{
     alert('You must enter a text.');
-  }
- 
+  };
+});
 
 
+copyButton.addEventListener('click', () => {
+  copyToClipboard();
 })
 
 deleteButton.addEventListener('click', () => {
